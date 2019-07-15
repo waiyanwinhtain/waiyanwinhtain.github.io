@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Docker Restart Polocies"
+title:  "Docker Restart Policies"
 categories: [ Docker ]
 tags: [devops, sysadmin, docker, container]
 ---
