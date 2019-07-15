@@ -1,3 +1,11 @@
+---
+layout: post
+title:  "Docker Restart Polocies"
+categories: [ Docker ]
+tags: [devops, sysadmin, docker, container]
+---
+![My helpful screenshot](../assets/docker.png)
+
 က်ေနာ္ ဒီမွာ အဓိကေျပာခ်င္တာကေတာ့ docker's restart policy ေတြအေျကာင္းပါ။ Production  မွာဆိုရင္ docker containers ေတြ down ေနျပီဆိုတဲ့ notifications ေတြရလာရရင္ sysadmins ေတြအေနနဲ့ container ေတြျပန္ျပန္ up ေနတာနဲ့ ညဘက္ေတြအိပ္တာေနာက္က်ရတာမ်ိုးေတြရွိတတ္ပါတယ္။ ဒီေန့ article ကေတာ့ အေပါ္ကလို problem ေတြမျဖစ္ေအာင္လို့ docker restart policy ကိုသံုးျပီးေတာ့ ဘယ္လိုေရွာင္ရွားရမလဲဆိုတာကိုက်ေနာ္ တတ္သေလာက္မွတ္သေလာက္ေလးေျပာျပေပးမွာပါ။
 
 Container ထဲမွာ application တစ္ခု crash ျဖစ္သြားတဲ့အခာ ဘာေတြျဖစ္လာမလဲ?
