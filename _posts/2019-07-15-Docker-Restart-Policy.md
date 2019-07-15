@@ -79,8 +79,8 @@ running ျဖစ္ေနတာကိုပဲေတြ့ရပါလိမ္
 `no` ဆိုတာကေတာ့ docker ရဲ့ default policy ပါ။ container ကဘယ္အေျခအေနျဖစ္ေနျဖစ္ေန restart လုပ္တဲ့ policy ပါ။
 
 ### on-failure
-on-failure policy ကေတာ့စိတ္၀င္စားစရာအေကာင္းဆံုးပါ။ ဒီေကာင္က exit code ကုိျကည့္ျပီးေတာ့ exit code က failure ျဖစ္တယ္ဆိုရင္ container ကို restart လုပ္ေပးျပီး exit code က success ျဖစ္ေနတယ္ဆိုရင္ေတာ့ restart လုပ္မွာမဟုတ္ပါဘူး။ exit code ဆိုတာကေတာ့ container တစ္ခု exit ျဖစ္သြားရင္ ဘယ္ status နဲ့ exit ျဖစ္သြားတယ္ဆိုတာကို ျပတဲ့ code ေလးေတြပါ။အေသးစိတ္သိခ်င္ရင္ေတာ့ [docker exit codes](https://stackoverflow.com/questions/31297616/what-is-the-authoritative-list-of-docker-run-exit-codes) ဆိုတဲဲ့ stackoverflow မွာ ေသခ်ာရွင္းျပထားတာကိုဖတ္ျကည့္ျကည့္ပါ။ အဲ့ဒါဆို က်ေနာ္အစက build ခဲ့တဲ့ image ကိုပဲ on-failure policy သံုးျပီးေတာ့ run ျကည့္ပါမယ္။
-```
+on-failure policy ကေတာ့စိတ္၀င္စားစရာအေကာင္းဆံုးပါ။ ဒီေကာင္က exit code ကုိျကည့္ျပီးေတာ့ exit code က failure ျဖစ္တယ္ဆိုရင္ container ကို restart လုပ္ေပးျပီး exit code က success ျဖစ္ေနတယ္ဆိုရင္ေတာ့ restart လုပ္မွာမဟုတ္ပါဘူး။ exit code ဆိုတာကေတာ့ container တစ္ခု exit ျဖစ္သြားရင္ ဘယ္ status နဲ့ exit ျဖစ္သြားတယ္ဆိုတာကို ျပတဲ့ code ေလးေတြပါ။အေသးစိတ္သိခ်င္ရင္ေတာ့ [docker exit codes](https://stackoverflow.com/questions/31297616/what-is-the-authoritative-list-of-docker-run-exit-codes) ဆိုျပီး stackoverflow မွာ ေသခ်ာရွင္းျပထားတာကိုဖတ္ျကည့္ျကည့္ပါ။ အဲ့ဒါဆို က်ေနာ္အစက build ခဲ့တဲ့ image ကိုပဲ on-failure policy သံုးျပီးေတာ့ run ျကည့္ပါမယ္။
+```bash
 $ docker run -d --name docker_restarts --restart on-failure:5 docker_restarts
 fc8ddc4572ba60133474d49511fd3a7ea476fcc0ea12a377d3c912af8d4593f4
 ```
@@ -127,9 +127,8 @@ $ sudo docker run -d --name docker_restarts --restart always docker_restarts
 676f12c9cd4cac7d3dd84d8b70734119ef956b3e5100b2449197c2352f3c4a55
 ```
 ျပီးရင္  30 second ေလာက္ေစာင့္ျပီး `docker ps -a` ကိုသံုးျပီး check ျကည့္ပါ။ container က success ျဖစ္ျပီး exit ျဖစ္သြားလည္း အျမဲတမ္း restart လုပ္ေပးေနတာကိုေတြ့ရပါလိမ့္မယ္။
-***
-နည္းနည္းအပ်င္းျကီးမယ္ဗ်ာ။
-***
+
+#### နည္းနည္းအပ်င္းျကီးမယ္ဗ်ာ။
 run ေနတဲ့ container ကို stop လုပ္ပါ။
 စက္ကို `reboot` ခ်ျကည့္လိုက္ပါ။ (`sudo reboot`)
 စက္ျပန္တက္လာတဲ့အခါ container status ကို `docker ps -a` နဲ့ ျပန္ check ျကည့္ပါ။
@@ -158,4 +157,3 @@ $ sudo reboot
 မ်ားမ်ားစမ္းေလ မ်ားမ်ား error တက္ေလ ကို့္အတြက္မ်ားမ်ားက်န္ေလပါပဲ။ သိသေလာက္ေလးေတာ့ျပန္ေျပာျပေပးပါမယ္။ docker နဲ့ container ေတြအေျကာင္းထပ္ေလ့လာခ်င္ေသးတယ္ဆိုရင္ေတာ့ ။ [Why containers and docker are the future](https://resources.codeship.com/ebooks/why-containerization-is-the-future) ဆိုတဲ့ စာအုပ္ေလးကို free download လုပ္ျပီးေလ့လာျကည့္ပါ။
 
 Thanks for reading ..
-***
