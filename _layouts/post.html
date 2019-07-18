@@ -6,4 +6,6 @@ layout: default
   <h2>{{ page.title }}</h2>
   <time datetime="{{ page.date | date_to_xmlschema }}" class="by-line">{{ page.date | date_to_string }}</time>
   {{ content }}
+  {% include share-bar.html %}
+  <div class="just-comments" data-allowguests="true" data-apikey="d3019e0e-a008-470f-8e6c-93d3b41c7cba"></div>
 </article>
